@@ -12,6 +12,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+    - name: install build dependencies
+      run: chmod +x scripts/install_build_deps.sh && ./scripts/install_build_deps.sh
     - name: test
       run: make test
       
@@ -20,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: install build dependencies
+      run: chmod +x scripts/install_build_deps.sh && ./scripts/install_build_deps.sh
     - name: make
       run: make
 
